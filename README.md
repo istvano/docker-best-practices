@@ -209,3 +209,10 @@ For more detailed information, see [container best practices](http://docs.projec
 To handle logs in your service easily, write all your logs to `stdout`. This uniform process makes it easy for the docker daemon to grab this stream.
 
 For more detailed information see [The Twelve-Factor App](https://12factor.net/logs) and [Configure logging drivers](https://docs.docker.com/engine/admin/logging/overview/).
+
+###  Volumes
+Volumes in your image are created when the container is running not when the image is created. During build process the data on your defined volumes should not be changed / modified. It shuold only be used when running the container.
+
+### ENV 
+Variables not needed during the build process should be added to the buttom of the Dockerfile for better readability.
+
